@@ -30,11 +30,4 @@ module "project-factory" {
 
   default_service_account = "deprivilege"
 
-  activate_api_identities = [{
-    api = "healthcare.googleapis.com"
-    roles = [
-      "roles/healthcare.serviceAgent",
-      "roles/bigquery.jobUser",
-    ]
-  }]
 }
