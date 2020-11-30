@@ -1,7 +1,7 @@
 
-locals {
-  credentials_file_path = var.credentials_path
-}
+// locals {
+//   credentials_file_path = var.credentials_path
+// }
 variable "organization_id" {
   description = "The organization id for the associated services"
 }
