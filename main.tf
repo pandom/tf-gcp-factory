@@ -26,7 +26,7 @@ provider "random" {
 }
 
 module "project-factory" {
-  source                  = "../../"
+  source                  = "terraform-google-modules/project-factory/google"
   random_project_id       = true
   name                    = "simple-sample-project"
   org_id                  = var.organization_id
