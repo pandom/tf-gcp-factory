@@ -1,5 +1,8 @@
 
-
+data "google_billing_account" "acct" {
+  display_name = "Sales"
+  open         = true
+}
 /******************************************
   Provider configuration
  *****************************************/
@@ -26,7 +29,7 @@ module "project-factory" {
   random_project_id       = true
   name                    = "simple-sample-project"
   org_id                  = var.organization_id
-  billing_account         = var.billing_account
+  billing_account         = data.google_billing_account.acct.id
 
   default_service_account = "deprivilege"
 
