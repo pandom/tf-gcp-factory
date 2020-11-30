@@ -41,5 +41,4 @@ module "project-factory" {
       "roles/bigquery.jobUser",
     ]
   }]
- }
 }
