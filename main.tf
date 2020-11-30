@@ -1,9 +1,5 @@
 
 
-locals {
-  credentials_file_path = var.credentials_path
-}
-
 /******************************************
   Provider configuration
  *****************************************/
