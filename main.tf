@@ -1,6 +1,6 @@
 provider "google" {
   #credentials = file(local.credentials_file_path)
-  version     = "~> 3.30"
+  version     = "~> 3.3.0"
 }
 
 provider "null" {
