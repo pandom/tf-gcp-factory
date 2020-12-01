@@ -1,19 +1,6 @@
-
-data "google_billing_account" "acct" {
-  display_name = "01DC95-72A541-BB674C"
-  open         = true
-}
-/******************************************
-  Provider configuration
- *****************************************/
 provider "google" {
   #credentials = file(local.credentials_file_path)
   version     = "~> 3.30"
-}
-
-provider "google-beta" {
-  #credentials = file(local.credentials_file_path)
-  version     = "~> 3.38"
 }
 
 provider "null" {
@@ -24,13 +11,9 @@ provider "random" {
   version = "~> 2.2"
 }
 
-module "project-factory" {
-  source                  = "terraform-google-modules/project-factory/google"
-  random_project_id       = true
-  name                    = "simple-sample-project"
-  org_id                  = var.organization_id
-  billing_account         = "01DC95-72A541-BB674C"
-
-  default_service_account = "deprivilege"
-
+module "network_example_simple_project" {
+  source  = "terraform-google-modules/network/google//examples/simple_project"
+  version = "2.5.0"
+  network_name = var.network_name
+  project_id = var.project_id
 }
