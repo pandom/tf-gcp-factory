@@ -1,8 +1,8 @@
 
-data "google_billing_account" "acct" {
-  display_name = "01DC95-72A541-BB674C"
-  open         = true
-}
+// data "google_billing_account" "acct" {
+//   display_name = "01DC95-72A541-BB674C"
+//   open         = true
+// }
 /******************************************
   Provider configuration
  *****************************************/
@@ -29,16 +29,7 @@ module "project-factory" {
   random_project_id       = true
   name                    = "simple-sample-project"
   org_id                  = var.organization_id
-  billing_account         = data.google_billing_account.acct.id
 
   default_service_account = "deprivilege"
 
-
-  activate_api_identities = [{
-    api = "healthcare.googleapis.com"
-    roles = [
-      "roles/healthcare.serviceAgent",
-      "roles/bigquery.jobUser",
-    ]
-  }]
 }
