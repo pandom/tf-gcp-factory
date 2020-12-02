@@ -12,5 +12,5 @@ variable "credentials_path" {
 }
 
 variable "subnet_region" {
-    default = "australia-southeast1-b"
+    default = "australia-southeast1"
 }
