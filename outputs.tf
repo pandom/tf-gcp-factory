@@ -4,7 +4,7 @@ output "project_info_example" {
   description = "The ID of the created project"
 }
 
-output "network name" {
+output "network_name" {
   value       = module.network_example_simple_project.network_name
   description = "The networks's name"
 }
